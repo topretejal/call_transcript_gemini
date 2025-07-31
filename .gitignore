@@ -143,6 +143,11 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+ct_venv/
+
+# transcripts and local storage
+transcripts/
+chat_history.db
 
 # Spyder project settings
 .spyderproject

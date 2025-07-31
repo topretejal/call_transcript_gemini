@@ -20,17 +20,21 @@ Keep it in .env file as GEMINI_API_KEY=”generated_key”
 
 Generate transcript(default is English)
 In English
-python app.py generate –language en
+python app.py generate --language en
 In Spanish
-python app.py generate –language es
+python app.py generate --language es
 In French
-python app.py generate –language fr
+python app.py generate --language fr
 Summarize a transcript
 python app.py summarize transcripts/call_transcript_en.txt --language en
 Ask a question about a transcript
 python app.py ask transcripts/call_transcript_en.txt "What was the duration of the call?" --language en
 Run all tests with
 Python -m unittest discover tests
+
+to view db content:
+sqlite3 chat_history.db
+SELECT id, timestamp, question, answer FROM chat_history ORDER BY timestamp DESC;
 
 ### Features
 
